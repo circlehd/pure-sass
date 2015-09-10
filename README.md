@@ -20,7 +20,7 @@ Note: You can [customize which Pure modules you need][customize].
 **Install with Bower:**
 
 ```shell
-$ bower install --save pure-sass
+$ bower install https://github.com/standid/pure-sass.git
 ```
 
 **Install with NPM:**
