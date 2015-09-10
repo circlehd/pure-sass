@@ -97,10 +97,7 @@ Optionally, you can build Pure from its source on Github. To do this, you'll
 need to have Node.js and npm installed. We use [Grunt][] to build Pure.
 
 ```shell
-$ git clone git@github.com:yahoo/pure.git
-$ cd pure
-$ npm install
-$ grunt
+$ scss -I "src/" --trace --update --force -t compressed css/pure.scss:build/pure.min.css
 ```
 
 ### Build Files
