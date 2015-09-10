@@ -3,6 +3,16 @@
   "description": "Use Pure's ridiculously tiny CSS to start any web project.",
   "version": "0.6.1-pre",
   "main": "build/pure.css",
+  "ignore": [
+    "**/.*",
+    "dist/cdn",
+    "speed",
+    "test",
+    "*.md",
+    "AUTHORS.txt",
+    "Gruntfile.js",
+    "package.json"
+  ]
   "devDependencies": {
     "normalize-css": "^3.0"
   }
