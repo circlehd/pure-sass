@@ -1,5 +1,4 @@
 $thePrefix: 'pure';
-
 @import "helpers";
 @import "normalize";
 @import "base";
@@ -7,6 +6,7 @@ $thePrefix: 'pure';
 @import "tables";
 @import "buttons-core";
 @import "buttons";
+@import "buttons-colored";
 @import "forms";
 @import "forms";
 @import "forms-r";

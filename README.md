@@ -1,4 +1,4 @@
-Pure
+Pure SASS
 ====
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/yahoo/pure?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -20,7 +20,7 @@ Note: You can [customize which Pure modules you need][customize].
 **Install with Bower:**
 
 ```shell
-$ bower install --save pure
+$ bower install --save pure-sass
 ```
 
 **Install with NPM:**
@@ -133,7 +133,7 @@ conventions of the files in the `build/` directory follow these rules:
 * `pure-nr-min.css`: Minified version of `pure-nr.css` that should be used in
   production.
 
-* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which 
+* `grids-responsive.css`: Unminified version of Pure's grid stylesheet which
   includes @media queries.
 
 * `grids-responsive-min.css`: Minified version of `grids-responsive.css` that
