@@ -1,5 +1,5 @@
 {
-  "name": "pure",
+  "name": "pure-sass",
   "description": "Use Pure's ridiculously tiny CSS to start any web project.",
   "version": "0.6.1-pre",
   "main": "build/pure.css",

@@ -1,0 +1,19 @@
+/* HORIZONTAL MENU */
+.#{$thePrefix}-menu-horizontal {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.#{$thePrefix}-menu-horizontal .#{$thePrefix}-menu-list {
+    display: inline-block;
+}
+
+/* Initial menus should be inline-block so that they are horizontal */
+.#{$thePrefix}-menu-horizontal .#{$thePrefix}-menu-item,
+.#{$thePrefix}-menu-horizontal .#{$thePrefix}-menu-heading,
+.#{$thePrefix}-menu-horizontal .#{$thePrefix}-menu-separator {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}

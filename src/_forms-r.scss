@@ -1,0 +1,64 @@
+@media only screen and (max-width : 480px) {
+    .#{$thePrefix}-form button[type="submit"] {
+        margin: 0.7em 0 0;
+    }
+
+    .#{$thePrefix}-form input:not([type]),
+    .#{$thePrefix}-form input[type="text"],
+    .#{$thePrefix}-form input[type="password"],
+    .#{$thePrefix}-form input[type="email"],
+    .#{$thePrefix}-form input[type="url"],
+    .#{$thePrefix}-form input[type="date"],
+    .#{$thePrefix}-form input[type="month"],
+    .#{$thePrefix}-form input[type="time"],
+    .#{$thePrefix}-form input[type="datetime"],
+    .#{$thePrefix}-form input[type="datetime-local"],
+    .#{$thePrefix}-form input[type="week"],
+    .#{$thePrefix}-form input[type="number"],
+    .#{$thePrefix}-form input[type="search"],
+    .#{$thePrefix}-form input[type="tel"],
+    .#{$thePrefix}-form input[type="color"],
+    .#{$thePrefix}-form label {
+        margin-bottom: 0.3em;
+        display: block;
+    }
+
+    .#{$thePrefix}-group input:not([type]),
+    .#{$thePrefix}-group input[type="text"],
+    .#{$thePrefix}-group input[type="password"],
+    .#{$thePrefix}-group input[type="email"],
+    .#{$thePrefix}-group input[type="url"],
+    .#{$thePrefix}-group input[type="date"],
+    .#{$thePrefix}-group input[type="month"],
+    .#{$thePrefix}-group input[type="time"],
+    .#{$thePrefix}-group input[type="datetime"],
+    .#{$thePrefix}-group input[type="datetime-local"],
+    .#{$thePrefix}-group input[type="week"],
+    .#{$thePrefix}-group input[type="number"],
+    .#{$thePrefix}-group input[type="search"],
+    .#{$thePrefix}-group input[type="tel"],
+    .#{$thePrefix}-group input[type="color"] {
+        margin-bottom: 0;
+    }
+
+    .#{$thePrefix}-form-aligned .#{$thePrefix}-control-group label {
+        margin-bottom: 0.3em;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .#{$thePrefix}-form-aligned .#{$thePrefix}-controls {
+        margin: 1.5em 0 0 0;
+    }
+
+    /* NOTE: pure-help-inline is deprecated. Use .#{$thePrefix}-form-message-inline instead. */
+    .#{$thePrefix}-form .#{$thePrefix}-help-inline,
+    .#{$thePrefix}-form-message-inline,
+    .#{$thePrefix}-form-message {
+        display: block;
+        font-size: 0.75em;
+        /* Increased bottom padding to make it group with its related input element. */
+        padding: 0.2em 0 0.8em;
+    }
+}

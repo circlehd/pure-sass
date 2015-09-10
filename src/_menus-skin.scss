@@ -1,0 +1,51 @@
+/* misc default styling */
+
+.#{$thePrefix}-menu-separator {
+    background-color: #ccc;
+    height: 1px;
+    margin: .3em 0;
+}
+
+.#{$thePrefix}-menu-horizontal .#{$thePrefix}-menu-separator {
+    width: 1px;
+    height: 1.3em;
+    margin: 0 .3em ;
+}
+
+.#{$thePrefix}-menu-heading {
+    text-transform: uppercase;
+    color: #565d64;
+}
+
+.#{$thePrefix}-menu-link {
+    color: #777;
+}
+
+.#{$thePrefix}-menu-children {
+    background-color: #fff;
+}
+
+.#{$thePrefix}-menu-link,
+.#{$thePrefix}-menu-disabled,
+.#{$thePrefix}-menu-heading {
+    padding: .5em 1em;
+}
+
+.#{$thePrefix}-menu-disabled {
+    opacity: .5;
+}
+
+.#{$thePrefix}-menu-disabled .#{$thePrefix}-menu-link:hover {
+    background-color: transparent;
+}
+
+.#{$thePrefix}-menu-active > .#{$thePrefix}-menu-link,
+.#{$thePrefix}-menu-link:hover,
+.#{$thePrefix}-menu-link:focus {
+    background-color: #eee;
+}
+
+.#{$thePrefix}-menu-selected .#{$thePrefix}-menu-link,
+.#{$thePrefix}-menu-selected .#{$thePrefix}-menu-link:visited {
+    color: #000;
+}

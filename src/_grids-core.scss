@@ -1,6 +1,6 @@
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
 
-.pure-g {
+.#{$thePrefix}-g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
@@ -37,7 +37,7 @@
     /* IE10 uses display: flexbox */
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
-    
+
     /* Prevents distributing space between rows */
     -ms-align-content: flex-start;
 	-webkit-align-content: flex-start;
@@ -49,11 +49,11 @@
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.pure-g {
+.#{$thePrefix}-g {
     word-spacing: -0.43em;
 }
 
-.pure-u {
+.#{$thePrefix}-u {
     display: inline-block;
     *display: inline; /* IE < 8: fake inline-block */
     zoom: 1;
@@ -67,6 +67,6 @@
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
-.pure-g [class *= "pure-u"] {
+.#{$thePrefix}-g [class *= "pure-u"] {
     font-family: sans-serif;
 }

@@ -1,0 +1,316 @@
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
+.#{$thePrefix}-form input[type="text"],
+.#{$thePrefix}-form input[type="password"],
+.#{$thePrefix}-form input[type="email"],
+.#{$thePrefix}-form input[type="url"],
+.#{$thePrefix}-form input[type="date"],
+.#{$thePrefix}-form input[type="month"],
+.#{$thePrefix}-form input[type="time"],
+.#{$thePrefix}-form input[type="datetime"],
+.#{$thePrefix}-form input[type="datetime-local"],
+.#{$thePrefix}-form input[type="week"],
+.#{$thePrefix}-form input[type="number"],
+.#{$thePrefix}-form input[type="search"],
+.#{$thePrefix}-form input[type="tel"],
+.#{$thePrefix}-form input[type="color"],
+.#{$thePrefix}-form select,
+.#{$thePrefix}-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.#{$thePrefix}-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.#{$thePrefix}-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.#{$thePrefix}-form input[type="text"]:focus,
+.#{$thePrefix}-form input[type="password"]:focus,
+.#{$thePrefix}-form input[type="email"]:focus,
+.#{$thePrefix}-form input[type="url"]:focus,
+.#{$thePrefix}-form input[type="date"]:focus,
+.#{$thePrefix}-form input[type="month"]:focus,
+.#{$thePrefix}-form input[type="time"]:focus,
+.#{$thePrefix}-form input[type="datetime"]:focus,
+.#{$thePrefix}-form input[type="datetime-local"]:focus,
+.#{$thePrefix}-form input[type="week"]:focus,
+.#{$thePrefix}-form input[type="number"]:focus,
+.#{$thePrefix}-form input[type="search"]:focus,
+.#{$thePrefix}-form input[type="tel"]:focus,
+.#{$thePrefix}-form input[type="color"]:focus,
+.#{$thePrefix}-form select:focus,
+.#{$thePrefix}-form textarea:focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.#{$thePrefix}-form input:not([type]):focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+.#{$thePrefix}-form input[type="file"]:focus,
+.#{$thePrefix}-form input[type="radio"]:focus,
+.#{$thePrefix}-form input[type="checkbox"]:focus {
+    outline: thin solid #129FEA;
+    outline: 1px auto #129FEA;
+}
+.#{$thePrefix}-form .#{$thePrefix}-checkbox,
+.#{$thePrefix}-form .#{$thePrefix}-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.#{$thePrefix}-form input[type="text"][disabled],
+.#{$thePrefix}-form input[type="password"][disabled],
+.#{$thePrefix}-form input[type="email"][disabled],
+.#{$thePrefix}-form input[type="url"][disabled],
+.#{$thePrefix}-form input[type="date"][disabled],
+.#{$thePrefix}-form input[type="month"][disabled],
+.#{$thePrefix}-form input[type="time"][disabled],
+.#{$thePrefix}-form input[type="datetime"][disabled],
+.#{$thePrefix}-form input[type="datetime-local"][disabled],
+.#{$thePrefix}-form input[type="week"][disabled],
+.#{$thePrefix}-form input[type="number"][disabled],
+.#{$thePrefix}-form input[type="search"][disabled],
+.#{$thePrefix}-form input[type="tel"][disabled],
+.#{$thePrefix}-form input[type="color"][disabled],
+.#{$thePrefix}-form select[disabled],
+.#{$thePrefix}-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.#{$thePrefix}-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+.#{$thePrefix}-form input[readonly],
+.#{$thePrefix}-form select[readonly],
+.#{$thePrefix}-form textarea[readonly] {
+    background-color: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.#{$thePrefix}-form input:focus:invalid,
+.#{$thePrefix}-form textarea:focus:invalid,
+.#{$thePrefix}-form select:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+}
+.#{$thePrefix}-form input[type="file"]:focus:invalid:focus,
+.#{$thePrefix}-form input[type="radio"]:focus:invalid:focus,
+.#{$thePrefix}-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+.#{$thePrefix}-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.#{$thePrefix}-form select[multiple] {
+    height: auto;
+}
+.#{$thePrefix}-form label {
+    margin: 0.5em 0 0.2em;
+}
+.#{$thePrefix}-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+.#{$thePrefix}-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.#{$thePrefix}-form-stacked input[type="text"],
+.#{$thePrefix}-form-stacked input[type="password"],
+.#{$thePrefix}-form-stacked input[type="email"],
+.#{$thePrefix}-form-stacked input[type="url"],
+.#{$thePrefix}-form-stacked input[type="date"],
+.#{$thePrefix}-form-stacked input[type="month"],
+.#{$thePrefix}-form-stacked input[type="time"],
+.#{$thePrefix}-form-stacked input[type="datetime"],
+.#{$thePrefix}-form-stacked input[type="datetime-local"],
+.#{$thePrefix}-form-stacked input[type="week"],
+.#{$thePrefix}-form-stacked input[type="number"],
+.#{$thePrefix}-form-stacked input[type="search"],
+.#{$thePrefix}-form-stacked input[type="tel"],
+.#{$thePrefix}-form-stacked input[type="color"],
+.#{$thePrefix}-form-stacked input[type="file"],
+.#{$thePrefix}-form-stacked select,
+.#{$thePrefix}-form-stacked label,
+.#{$thePrefix}-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.#{$thePrefix}-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+.#{$thePrefix}-form-aligned input,
+.#{$thePrefix}-form-aligned textarea,
+.#{$thePrefix}-form-aligned select,
+/* NOTE: pure-help-inline is deprecated. Use .#{$thePrefix}-form-message-inline instead. */
+.#{$thePrefix}-form-aligned .#{$thePrefix}-help-inline,
+.#{$thePrefix}-form-message-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+.#{$thePrefix}-form-aligned textarea {
+    vertical-align: top;
+}
+
+/* Aligned Forms */
+.#{$thePrefix}-form-aligned .#{$thePrefix}-control-group {
+    margin-bottom: 0.5em;
+}
+.#{$thePrefix}-form-aligned .#{$thePrefix}-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.#{$thePrefix}-form-aligned .#{$thePrefix}-controls {
+    margin: 1.5em 0 0 11em;
+}
+
+/* Rounded Inputs */
+.#{$thePrefix}-form input.#{$thePrefix}-input-rounded,
+.#{$thePrefix}-form .#{$thePrefix}-input-rounded {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+/* Grouped Inputs */
+.#{$thePrefix}-form .#{$thePrefix}-group fieldset {
+    margin-bottom: 10px;
+}
+.#{$thePrefix}-form .#{$thePrefix}-group input,
+.#{$thePrefix}-form .#{$thePrefix}-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+.#{$thePrefix}-form .#{$thePrefix}-group input:focus,
+.#{$thePrefix}-form .#{$thePrefix}-group textarea:focus {
+    z-index: 3;
+}
+.#{$thePrefix}-form .#{$thePrefix}-group input:first-child,
+.#{$thePrefix}-form .#{$thePrefix}-group textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
+.#{$thePrefix}-form .#{$thePrefix}-group input:first-child:last-child,
+.#{$thePrefix}-form .#{$thePrefix}-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+.#{$thePrefix}-form .#{$thePrefix}-group input:last-child,
+.#{$thePrefix}-form .#{$thePrefix}-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+.#{$thePrefix}-form .#{$thePrefix}-group button {
+    margin: 0.35em 0;
+}
+
+.#{$thePrefix}-form .#{$thePrefix}-input-1 {
+    width: 100%;
+}
+.#{$thePrefix}-form .#{$thePrefix}-input-3-4 {
+    width: 75%;
+}
+.#{$thePrefix}-form .#{$thePrefix}-input-2-3 {
+    width: 66%;
+}
+.#{$thePrefix}-form .#{$thePrefix}-input-1-2 {
+    width: 50%;
+}
+.#{$thePrefix}-form .#{$thePrefix}-input-1-3 {
+    width: 33%;
+}
+.#{$thePrefix}-form .#{$thePrefix}-input-1-4 {
+    width: 25%;
+}
+
+/* Inline help for forms */
+/* NOTE: pure-help-inline is deprecated. Use .#{$thePrefix}-form-message-inline instead. */
+.#{$thePrefix}-form .#{$thePrefix}-help-inline,
+.#{$thePrefix}-form-message-inline {
+    display: inline-block;
+    padding-left: 0.3em;
+    color: #666;
+    vertical-align: middle;
+    font-size: 0.875em;
+}
+
+/* Block help for forms */
+.#{$thePrefix}-form-message {
+    display: block;
+    color: #666;
+    font-size: 0.875em;
+}
